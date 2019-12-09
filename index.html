@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1 id="placeholder"></h1>
+    <script>
+
+        var point_a = parseFloat(takeInput("Enter a point", "e.g. 2.3"));
+        var roundedPoint = Math.ceil(point_a);
+        var text = takeInput("Enter String :", "e.g. anything you want");
+        var slicedText = "", reverseText = "";
+        
+        if(roundedPoint < text.length){
+            slicedText = text.slice(0,roundedPoint);
+        }
+        else{
+            slicedText = text.slice(0,text.length);
+        }
+
+        for(var i=slicedText.length-1; i>=0; i--){
+            reverseText = reverseText.concat(slicedText[i]);
+        }
+
+        alert(reverseText);
+
+        function takeInput(phrase,placeholder){
+            userInput = prompt(phrase, placeholder);
+
+            if(userInput === "" || userInput === " " || userInput === placeholder){
+                takeInput();
+            }
+            return userInput.trim();
+        }
+    </script>
+</body>
+</html>
