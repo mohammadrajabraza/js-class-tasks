@@ -40,7 +40,23 @@
 
         //-------------------------------------------------
 
+        //-------------------------------------------------
+        //--------------------- Part 2 --------------------
 
+        var inputNumber = prompt("Enter any positive number to calculate factorial","e.g. 5 or 9 or 23");
+        var factorial = factorialize(inputNumber);
+        console.log(factorial);
+
+        function factorialize(inputNumber){
+            
+            var factorial = 1;
+        
+            while (inputNumber !== 1){
+                factorial = factorial * inputNumber--;
+            }
+
+            return factorial;
+        }
     </script>
     
 </body>
