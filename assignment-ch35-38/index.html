@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+
+        //---------------------------------------------
+        //------------------ Part 1 -------------------
+
+        var stringToCapitalize = prompt("Enter string", "e.g. This is dummy string");
+        var capitalizeString = capitalizeFirstChar(stringToCapitalize);
+        console.log(capitalizeString);
+
+
+        function capitalizeFirstChar(stringToCapitalize){
+
+            var stringArray = stringToCapitalize.split(" ");
+            var capitalizeString = "";
+            var capitalChar, remainingString, space=" ";
+
+            for(var i = 0; i < stringArray.length; i++){
+
+                //Changing first character to upper case
+                capitalChar = stringArray[i].charAt(0).toUpperCase();
+                //extracting remaining word
+                remainingString = stringArray[i].slice(1);
+                //appending the capitalize word in string
+                capitalizeString = capitalizeString.concat(capitalChar, remainingString, space);
+            }
+
+            return capitalizeString;
+        }
+
+        //-------------------------------------------------
+
+
+    </script>
+    
+</body>
+</html>
