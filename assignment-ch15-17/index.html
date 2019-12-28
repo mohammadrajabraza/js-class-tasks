@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // ---------------- Part 1 --------------------
+        var courses = [];
+
+        // ---------------- Part 2 --------------------
+        for (var i = 0; i < 5; i++){
+            courses.push(prompt("Enter course " +(i+1) +" name","e.g. HTML"));
+        }
+
+        // ---------------- Part 3 --------------------
+        alert(courses);
+
+        // ---------------- Part 4,5 --------------------
+        for(var j = 0; j < courses.length; j++){
+            courses.splice(j,1,prompt("Enter course " +(j+1) +" name",courses[j]));
+        }
+
+        // ---------------- Part 6 --------------------
+        alert(courses);
+    </script>
+</body>
+</html>
