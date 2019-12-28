@@ -6,14 +6,17 @@
 <body>
     <h1 id="placeholder"></h1>
     <script>
-
-        var point_a = parseFloat(takeInput("Enter a point", "e.g. 2.3"));
-        var roundedPoint = Math.ceil(point_a);
-        var text = takeInput("Enter String :", "e.g. anything you want");
-        var slicedText = "", reverseText = "";
+// ----------------------------- Part 1 -------------------------------------
+        var decimalNumber = parseFloat(takeInput("Enter a decimal number", "e.g. 2.3"));
         
-        if(roundedPoint < text.length){
-            slicedText = text.slice(0,roundedPoint);
+        var convertedNumber = Math.ceil(decimalNumber);
+        
+        var text = takeInput("Enter String :", "e.g. anything you want");
+        
+        var slicedText, reverseText = "";
+        
+        if(convertedNumber < text.length){
+            slicedText = text.slice(0,convertedNumber);
         }
         else{
             slicedText = text.slice(0,text.length);
@@ -24,6 +27,23 @@
         }
 
         alert(reverseText);
+
+// ----------------------------- Part 2 --------------------------------------
+
+        var inputString = takeInput("Enter any string value","e.g. this iS gOiNg to be fUn");
+
+        var wordsContainer = inputString.split(" ");
+
+        var firstChar, remainingChars, inputString = "";
+
+        for (var i = 0; i < wordsContainer.length; i++){
+            firstChar = wordsContainer[i].charAt(0).toUpperCase();
+            remainingChars = wordsContainer[i].slice(1).toLowerCase();
+            wordsContainer.splice(i,1,firstChar +remainingChars);
+            inputString = inputString.concat(wordsContainer[i]," ");
+        }
+        console.log(inputString);
+
 
         function takeInput(phrase,placeholder){
             userInput = prompt(phrase, placeholder);
