@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+//------------------------ Calculator --------------------------
+
+
+        // --------- Part 1 --------
+        var operand1 = prompt("Enter first number", "e.g. 2,3,4");
+
+        // --------- Part 2 --------
+        var operand2 = prompt("Enter second number", "e.g. 5,6,7");
+
+        // --------- Part 3 --------
+        var operator = prompt("Enter operation to perform","e.g. -,+,/,* or %");
+
+        // --------- Part 4 --------
+
+        // if (operator == "+"){
+        //     alert(operand1 +operator +operand2 +" =" +(Number(operand1) + Number(operand2)));
+        // }else if (operator == "-"){
+        //     alert(operand1 +operator +operand2 +" =" +(Number(operand1) - Number(operand2)));
+        // }else if (operator == "/"){
+        //     alert(operand1 +operator +operand2 +" =" +(Number(operand1) / Number(operand2)));
+        // }else if (operator == "*"){
+        //     alert(operand1 +operator +operand2 +" =" +(Number(operand1) * Number(operand2)));
+        // }else if (operator == "%"){
+        //     alert(operand1 +operator +operand2 +" =" +(Number(operand1) % Number(operand2)));
+        // }else{
+        //     alert("You provided an invalid operator");
+        // }
+
+// -------------------- Percentage Calculator -----------------------------
+        var marks = [];
+        var sum = 0;
+
+        for(var i=0; i < 5; i++){
+            marks.push(Number(prompt("Enter marks of subject " +(i+1)), "e.g. 33"));
+            sum = sum + marks[i];
+        }
+        
+        var percentage = sum / 5;
+        alert("Total marks : " +sum  +" Percentage : " +percentage)
+
+
+        </script>
+</body>
+</html>
