@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var marks = [];
+        var sum = 0;
+
+        for(var i=0; i < 5; i++){
+            marks.push(Number(prompt("Enter marks of subject " +(i+1)), "e.g. 33"));
+            sum = sum + marks[i];
+        }
+        
+        var percentage = sum / 5;
+        var grade;
+
+        switch (true) {
+            case (90<=percentage && percentage<=100):
+                grade = "A+";
+                break;
+            case (75<=percentage && percentage<=89):
+                grade = "A";
+                break;
+            case (60<=percentage && percentage<=74):
+                grade = "B";
+                break;
+            case (45<=percentage && percentage<=59):
+                grade = "C";
+                break;
+            case (30<=percentage && percentage<=44):
+                grade = "D";
+                break;
+            default:
+                grade = "F";
+        }
+        alert("Total marks : " +sum  +" Percentage : " +percentage +" Grade : " +grade);
+    
+    </script>
+</body>
+</html>
